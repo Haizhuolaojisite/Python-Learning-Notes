@@ -1,0 +1,9 @@
+# Print the maximum of the date column
+print(sales['date'].max())
+    
+2012-10-26 00:00:00
+    
+# Print the minimum of the date column
+print(sales['date'].min())
+
+2010-02-05 00:00:00
