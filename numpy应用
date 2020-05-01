@@ -190,6 +190,24 @@ np.rowstack((a,b))
  ar.tolist()
  [[0,1,2,3],[4,5,6,7],[8,9,10,11],[12,13,14,15]]
  
+ 21. 设置打印时显示方式: np.set_printoptions()
+ >>> np.set_printoptions(precision=4)
+>>> print np.array([1.123456789])
+[ 1.1235]
+
+>>> np.set_printoptions(threshold=5)
+>>> print np.arange(10)
+[0 1 2 ..., 7 8 9]
+
+>>> eps = np.finfo(float).eps
+>>> x = np.arange(4.)
+>>> x**2 - (x + eps)**2
+array([ -4.9304e-32,  -4.4409e-16,   0.0000e+00,   0.0000e+00])
+>>> np.set_printoptions(suppress=True)
+>>> x**2 - (x + eps)**2
+array([-0., -0.,  0.,  0.])
+
+ 
  
             
             
