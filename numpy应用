@@ -207,7 +207,47 @@ array([ -4.9304e-32,  -4.4409e-16,   0.0000e+00,   0.0000e+00])
 >>> x**2 - (x + eps)**2
 array([-0., -0.,  0.,  0.])
 
- 
+22. 二维数组的切片和索引
+ar = np.arange(16).reshape(4,4)
+-->array([[0,1,2,3],
+          [4,5,6,7],
+          [8,9,10,11],
+          [12,13,14,15]])
+ar[:2,1:]
+-->array([[1,2,3],
+          [5,6,7]])
+
+23. 随机数生成
+np.random.normal(size=(4,4))
+--> 4x4的array
+
+np.random.rand() #生成一个[0,1)之间的随机浮点数或N维浮点数组---均匀分布
+--> 0.5718965755174878
+
+np.random.rand(4)
+-->array([0.50897674, 0.96063824, 0.30698317, 0.41407583])
+
+np.random.rand(2,3)
+-->array([[0.88528773,0,87437328,0.02799432],
+          [0.21416104,0.03953028,0.85786322]])
+
+np.random.randint(low,high=None,size=None,dtype='l') #生成一个整数或N维整数数组
+
+np.random.randint(2)
+0
+
+np.random.randint(2,size=5)
+array([0,0,1,0,0])
+
+np.random.randint(2,6,size=5)
+array([2,2,3,2,2])
+
+24. 存储数组数据
+ar = np.random.rand(5,5)
+np.save('arraydata.npy', ar)
+
+25. 读取数组数据
+np.load("arraydata.npy")
  
             
             
